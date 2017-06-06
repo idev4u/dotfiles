@@ -1,27 +1,28 @@
 # add bosh comands
-bcuf(){
-  'bosh --parallel 10 create release --force && bosh upload release'
+function bcuf() {
+  bosh --parallel 10 create release --force && bosh upload release
 }
 
-bcud() {
-  bcuf && bosh -n deploy
+function bcud() {
+  bcuf && bosh upload release && bosh -n deploy
 }
 
-function boshDeployWithManifest(){
+function boshDeployWithManifest() {
   bosh -d $1 deploy
 }
 alias bd=boshDeployWithManifest
 
 # bosh ssh with manifest
-function boshSSHWithManifest(){
+function boshSSHWithManifest() {
   bosh -d $1 ssh
 }
 alias bssh='boshSSHWithManifest'
 
 # bosh delete deployment with force
-function boshDeleteDeployment(){
+function boshDeleteDeployment() {
   bosh delete deployment $1 --force
 }
+
 alias bddf='boshDeleteDeployment'
 
 # bosh status
