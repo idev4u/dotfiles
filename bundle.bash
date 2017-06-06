@@ -1,13 +1,13 @@
 bake(){
-  'bundle exec rake'
+  bundle exec rake
 }
 
 be(){
-  'bundle exec'
+  bundle exec
 }
 
 bi(){
-  'bundle install'
+  bundle install
 }
 
 complete -o default -o nospace -F _rakecomplete bake
