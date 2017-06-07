@@ -1,10 +1,13 @@
 dev_mode(){
-  BITS_PROJECT_HOME=~/workspace/bits-service-release/src/bits-service
-  linkchk ${BITS_PROJECT_HOME}
+  BITS_PROJECT_HOME=~/workspace/bits-service-release
+  linkchk ${BITS_PROJECT_HOME}/src/bits-service
   if [ "$?" != 10 ]
   then
-    ln -s ~/workspace/bits-service ${BITS_PROJECT_HOME}
-    echo "Turn bits-service into dev_mode."
+    ln -s ~/workspace/bits-service/ ${BITS_PROJECT_HOME}/src/bits-service
+    if [ "$?" == 0 ]
+    then
+      echo "Turn bits-service into dev_mode."
+    fi
   fi
 }
 
