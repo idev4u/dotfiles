@@ -2,6 +2,10 @@ bake(){
   bundle exec rake
 }
 
+bur(){
+  bundle exec rspec
+}
+
 be(){
   bundle exec
 }
