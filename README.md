@@ -1,6 +1,6 @@
 # dotfiles
 
-This is the space where I collect all my usfull dotfiles.
+This is the space where I collect all my usefull dotfiles.
 
 ## development 
 
