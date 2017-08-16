@@ -10,7 +10,7 @@ function bcud() {
 function boshDeployWithManifest() {
   bosh -d $1 deploy
 }
-alias bd=boshDeployWithManifest
+alias bdwm=boshDeployWithManifest
 
 # bosh ssh with manifest
 function boshSSHWithManifest() {
@@ -34,3 +34,5 @@ alias bst='bosh_status'
 getCurrentManifest(){
   bosh status | grep Manifest | awk '{print $2}'
 }
+
+alias bd='bosh deploy --no-redact'
