@@ -44,7 +44,7 @@ function vboxdown() {
 function vboxstat() {
   if [ -z $1 ]
   then
-    printf "state file is missing! usage \"vboxup state.json\" \n"
+    printf "state file is missing! usage \"vboxstat state.json\" \n"
     return 1
   fi
   current_vm_cid=`cat $1 | grep current_vm_cid | tr -d [:blank:][,][\"] | cut -d ':' -f 2`
