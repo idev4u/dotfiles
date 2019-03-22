@@ -1,13 +1,13 @@
 bake(){
-  bundle exec rake
+  bundle exec rake $@
 }
 
 bur(){
-  bundle exec rspec
+  bundle exec rspec $@
 }
 
 be(){
-  bundle exec
+  bundle exec $@
 }
 
 bi(){
